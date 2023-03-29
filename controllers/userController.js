@@ -4,6 +4,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const cookie = require("cookie-parser");
 const dotenv = require("dotenv").config();
+const sendMail = require("../controllers/sendMail");
+const otpGenerator = require('otp-generator');
+const optVerification = require("../models/otpVerification");
 const saltRounds = 10;
 //@desc Register a user
 //@route POST /api/users/register
@@ -24,13 +27,40 @@ const userRegistration = asyncHandler ( async (req, res) => {
         res.status(400);
         throw new Error("User already registered with this email!");
     }
+
     const salt = bcrypt.genSaltSync(saltRounds);
 
+    // const random = Math.floor(Math.random() * 9000 + 1000);
+    // const otp = await otpGenerator.generate(6, {upperCaseAlphabets: false, specialChars: false});
+    // console.log(otp);
+
+    // const hashedOtp = await bcrypt.hash(otp, salt);
+
+    // const otpRecord =  await otpVerification.create({
+    //     email,
+    //     otp: hashedOtp
+    // });
+
+    // if(!otpRecord){
+    //     res.status(40);
+    //     throw new Error("Unable to create record");
+    // };
+
+    // console.log(otpRecord);
+
+    // const mailDetails = {
+    //     email,
+    //     otp,
+    //     message: "Please verify your otp"
+    // };
+    // const msg = await sendMail(mailDetails);
+    
+   
     const hashedPassword = await bcrypt.hash(password, salt);
     console.log("Hashed Password: ", hashedPassword);
     const user = await User.create( {
         name,
-        phone,
+        phone, 
         email,
         address,
         password : hashedPassword,
