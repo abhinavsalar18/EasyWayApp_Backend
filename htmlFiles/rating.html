@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Star Rating Using Only HTML CSS</title>
+    <style>
+.rating {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(180deg);
+	display: flex;
+    flex-direction: row;
+}
+.rating input {
+	display: none;
+}
+.rating label {
+	display: block;
+	cursor: pointer;
+	width: 5rem;
+}
+.rating label:before {
+	content: '★';
+	position: relative;
+	display: block;
+	font-size: 4rem;
+	color: black;
+}
+.rating label:after {
+	content: '★';
+	position: absolute;
+	display: block;
+	font-size: 4rem;
+	color: #0998b8;
+	top: 0;
+	opacity: 0;
+	transition: .2s;
+}
+.rating label::selection, .rating input:checked~label:after {
+	opacity: 1;
+}
+    </style>
+</head>
+<body>
+	<div class="rating">
+ <input type="radio" name="rate" id="rate1">
+ <label for="rate1"></label>
+ <input type="radio" name="rate" id="rate2">
+ <label for="rate2"></label>
+ <input type="radio" name="rate" id="rate3">
+ <label for="rate3"></label>
+ <input type="radio" name="rate" id="rate4">
+ <label for="rate4"></label>
+ <input type="radio" name="rate" id="rate5">
+ <label for="rate5"></label>
+</div>
+</body>
+</html>
+
+</body>
+</html>

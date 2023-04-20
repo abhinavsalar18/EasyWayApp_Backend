@@ -8,7 +8,7 @@ const {
     userProfile,
     editUser,
     getAllUsers,
-    deleteUser
+    deleteUser,
 } = require("../controllers/userController");
 
 const router = express.Router();

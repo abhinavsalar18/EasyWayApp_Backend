@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+            /* color: #0998b8; */
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .container{
+                width: 70%;
+                background-color: transparent;
+                border-radius: .5rem;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 1px 1px 10px;
+                /* padding-left: 5rem; */
+                padding-left: 3rem;
+                padding-right: 3rem;
+                overflow: hidden;
+            }
+            .heading{
+                font-size: 190%;
+                color: #0998b8;
+                padding-bottom: 1rem;
+            }
+
+            .input{
+                border: 1px solid gray;
+                margin-top: .75rem;
+                margin-bottom: .75rem;
+                width: 100%;
+                height: 3rem;
+                border-radius: .25rem;
+                font-size: 1rem;
+                padding: 0rem .75rem;
+            }
+
+            label{
+                color: gray;
+            }
+            .name, .email{
+                color:#0998b8;
+                font-size: 1.15rem;
+            }
+
+            .msg-heading{
+                /* color:rgb(12, 118, 151); */
+                color:#0998b8;
+                font-size: 1.25rem;
+            }
+
+            #msg-box{
+                margin-top: .5rem;
+                border-color: transparent;
+                border-radius: .25rem;
+                width: 100%;
+                height: 6rem;
+                padding: .75rem;
+                font-size: large;
+                font-weight: 400;
+                background-color: #e9ebeb;
+                resize: none;
+            }
+            .submit{
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                display: flex;
+                justify-content: center;
+            }
+
+            .button{
+                position: relative;
+                background-color: #0998b8;
+                color: white;
+                padding: 8px;
+                font-size: 1.15rem;
+                border-color: transparent;
+                border-radius: 5px;
+            }
+
+            /* css for rating */
+
+            .rating-heading{
+                color:#0998b8;
+                font-size: 1.25rem;
+            }
+            .rating {
+                margin-top: -2rem;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                padding-bottom: 1rem;
+            }
+            .rating input {
+                display: none;
+            }
+            .rating label {
+                display: block;
+                cursor: pointer;
+                width: auto;
+            }
+            .rating label::before {
+                content: '★';
+              position: absolute;
+                display:inline-block;
+                font-size: 3rem;
+                color: black;
+            
+            }
+            .rating label::after {
+                content: '★';
+              position: relative;
+                display: inline-block;
+                font-size: 3rem;
+                color: #0998b8;
+                 opacity: 0;
+                transition: .4s;
+            }
+            .rating label::selection, .rating input:checked~label:after {
+                opacity: 1;
+               
+
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="heading">Feedback&nbsp;<img src="./chat_g.png" alt="" width="25"></div>
+            <div class="sub-cont">
+                <form action="">
+                    <label for="name" class="name" >Name</label><br>
+                    <input type="text" class="input" placeholder="Your name"><br>
+                    <label for="email" class="email">Email</label><br>
+                    <input type="email" name="email" class="input" placeholder="Your email"><br><br>
+                    <div class="rating-heading">Rate us..</div><br>
+                    <div class="rating">
+                            <input type="radio" name="rate" id="rate1">
+                            <label for="rate1"></label>
+                            <input type="radio" name="rate" id="rate2">
+                            <label for="rate2"></label>
+                            <input type="radio" name="rate" id="rate3">
+                            <label for="rate3"></label>
+                            <input type="radio" name="rate" id="rate4">
+                            <label for="rate4"></label>
+                            <input type="radio" name="rate" id="rate5">
+                            <label for="rate5"></label>
+                    </div>
+                    <label for="email" class="msg-heading">Message</label><br>
+                    
+                    <textarea name="msg" id="msg-box" placeholder="Write your feedback here..."></textarea><br>
+                    <div class="submit">
+                        <input type="submit" class="button" value="Send">
+                    </div>
+                </form>   
+            </div> 
+    </div>
+</body>
+</html>

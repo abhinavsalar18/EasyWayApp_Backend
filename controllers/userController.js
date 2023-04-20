@@ -30,32 +30,6 @@ const userRegistration = asyncHandler ( async (req, res) => {
 
     const salt = bcrypt.genSaltSync(saltRounds);
 
-    // const random = Math.floor(Math.random() * 9000 + 1000);
-    // const otp = await otpGenerator.generate(6, {upperCaseAlphabets: false, specialChars: false});
-    // console.log(otp);
-
-    // const hashedOtp = await bcrypt.hash(otp, salt);
-
-    // const otpRecord =  await otpVerification.create({
-    //     email,
-    //     otp: hashedOtp
-    // });
-
-    // if(!otpRecord){
-    //     res.status(40);
-    //     throw new Error("Unable to create record");
-    // };
-
-    // console.log(otpRecord);
-
-    // const mailDetails = {
-    //     email,
-    //     otp,
-    //     message: "Please verify your otp"
-    // };
-    // const msg = await sendMail(mailDetails);
-    
-   
     const hashedPassword = await bcrypt.hash(password, salt);
     console.log("Hashed Password: ", hashedPassword);
     const user = await User.create( {
@@ -205,13 +179,11 @@ const deleteUser = asyncHandler ( async (req, res) => {
 //@route GET /api/users/logout
 //@access public
 
-const userLogout = asyncHandler ( async (re, res) =>{
+const userLogout = asyncHandler ( async (req, res) =>{
     console.log("logout");
     res.clearCookie("access_token");
     res.status(200).json({ message: "Logout success!"});
-})
-
-
+});
 
 
 module.exports = {

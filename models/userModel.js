@@ -15,12 +15,7 @@ const userSchema = mongoose.Schema({
     phone: {
         type : String
     },
-
-    email : {
-        type : String,
-        required: [true, "Please provide an email"]
-    },
-
+    
     address :{
         houseNumber: {
             type: String

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        .main-container{
+            display: flex;
+            /* flex-direction: column; */
+            /* align-items: center; */
+            /* justify-content: space-around; */
+            margin-left: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .upper{
+            display: flex;
+            flex-direction: row;
+            margin: 1rem;
+            /* justify-content: space-between; */
+            flex-wrap: wrap;
+        }
+
+        .bio{
+            display: flex;
+            flex-direction: column;
+            margin: 0rem 4rem;
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .bio > .name{
+            font-size: 2rem;
+            font-weight: 400;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .bio > .work{
+            font-size: 1.2rem;
+            margin-top: .25rem;
+            color:#0998b8;
+        }
+
+        .bio > .rating-cont > .heading{
+            margin-top: 1.5rem;
+            color: gray;
+        }
+
+        .bio > .rating-cont > .rating{
+            display: flex;
+            flex-direction: row;
+            margin: 1rem 0rem;
+        }
+
+        .contact_user{
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+        }
+
+        .msg{
+            /* margin-left: 1rem; */
+            padding: 5px;
+            padding-left: 0px;
+        }
+
+        .msg > span, .contacts > span , .report_user > span{
+            /* margin-left: .35rem; */
+            font-size: 1rem;
+        }
+
+        .contact_user > .contacts, .report_user{
+            margin-left: 2rem;
+            margin-top: .25rem;
+        }
+
+        .opac{
+            opacity: 0.25;
+        }
+        
+        .lower{
+            display: flex;
+            flex-direction: row;
+            margin-left: inherit;
+            margin-top: 1rem;
+        }
+
+        .lower > .experience{
+            width: 15rem;
+        }
+
+        .exp-hr{
+            display: inline-block;
+            width: 7.5rem;
+            margin: 0 auto;
+            margin-left: .5rem;
+        }
+        
+        .about{
+            margin-left: 2.5rem;
+            overflow: hidden;
+        }
+        
+        .contact_info{
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+        }
+        .about > .heading, .basic_info > .heading{
+            margin-top: 2rem;
+            text-transform: uppercase;
+            color: gray;
+            font-size: .85rem;
+        }
+
+        .contact_info > .fields > .field{
+            margin-right: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .contact_info > .details > .value{
+            margin-bottom: 1rem;
+            font-weight: 545;
+            color: #0998b8;
+        }
+
+        .basic_info{
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: row;
+        }
+        .basic_info > .fields > .field{
+            margin-right: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .basic_info > .details > .value{
+            margin-bottom: 1rem;
+            font-weight: 545;
+        }
+        .right{
+            width: 50%;
+            border: 1px solid red;
+            height: 100vh;
+        }
+        .left{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left">
+        <div class="upper">
+            <div class="profile_pic">
+                <img src="./profilePic.jpg" alt="" width="220">
+            </div>
+            <div class="bio">
+                <div class="name">Jeremy Rose</div>
+                <div class="work">Product Designer</div>
+                <div class="rating-cont">
+                    <div class="heading">RATING</div>
+                    <div class="rating">
+                        <span style="font-size: 1.7rem; margin-right: 1rem; vertical-align: middle;">4.0</span>
+                        <div>
+                            <img src="./star.png" alt="" width="20">
+                            <img src="./star.png" alt="" width="20">
+                            <img src="./star.png" alt="" width="20">
+                            <img src="./star.png" alt="" width="20">
+                            <img src="./star.png" alt="" width="20" class="opac">
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_user">
+                    <div class="msg">
+                        <img src="./message.png" alt="" width="15" style="vertical-align: middle;">
+                        <span>Send message</span>
+                        <!-- <img src="./check.png" alt="" width="20" style="vertical-align: middle;"> -->
+                        <!-- <span>Contacts</span> -->
+                    </div>
+                    <div class="contacts">
+                        <img src="./check.png" alt="" width="18" style="vertical-align: middle;">
+                        <span>Contacts</span>
+                    </div>
+                    <div class="report_user">
+                        <img src="./report.png" alt="" width="18" style="vertical-align: middle;">
+                        <span>Report user</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="experience">
+                <div style="text-transform: uppercase; color: gray; font-size: .85rem;">Experience <hr class="exp-hr"></div>
+            </div>
+            <div class="about">
+                <img src="./user.png" alt="" width="15" style="vertical-align: middle;">
+
+                <span>About</span>
+                <hr style="display: inline-block; width: 25rem;" >
+                <div class="heading">Contact Information</div>
+                <div class="contact_info">
+                    <div class="fields">
+                        <div class="field">Phone:</div>
+                        <div class="field">Address:</div>
+                        <div class="field">E-mail:</div>
+                    </div>
+                    <div class="details">
+                        <div class="value">+91 1234567890</div>
+                        <div class="value">02 Street Road Prayagraj Uttar Pradesh</div>
+                        <div class="value">user@gmail.com</div>
+                    </div>
+                </div>
+                <div class="heading">Basic Information</div>
+                <div class="basic_info">
+                    <div class="fields">
+                        <div class="field">Birthday:</div>
+                        <div class="field">Gender:</div>
+                    </div>
+                    <div class="details">
+                        <div class="value">April 21, 2000</div>
+                        <div class="value">Male</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="right">
+            <h1>List of Working</h1>
+        </div>
+    </div>
+</body>
+</html>

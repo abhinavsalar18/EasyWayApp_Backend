@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+    <style>
+       
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .main-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            }
+            .left{
+                width: 100%;
+            }
+
+            .right{
+                width: 100%;
+                background-color: #0998b8;
+                border-radius: .45rem;
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                margin-top: 2rem;
+                margin-right: 1rem;
+            }
+
+            .heading{
+            color: #0998b8;
+            font-size: 1.25rem;
+            font-weight: bold;
+            }
+            .msg{
+                margin: 2rem;
+                max-width: 35rem;
+                margin-left: 0rem;
+                font-size: 1.10em;
+            }
+            
+            .phone{
+                margin: 1rem;
+                margin-left: 0rem;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .email{
+                margin: 1rem;
+                margin-left: 0rem;
+                display: flex;
+                flex-direction: row;
+            }
+            input{
+                width: 100%;
+            }
+            
+            input, textarea{
+                display: block;
+                justify-content: center;
+                width: 100%;
+                min-width: 100%;
+                padding: .70rem 0rem;
+                padding-left: 0.5rem;
+                margin: .75rem 0rem;
+                border-radius: 5px;
+            }
+            textarea{
+                resize: none;
+            }
+
+            #send{
+                background-image: linear-gradient(to right, #24C6DC 0%, #218dd0  51%, #6ddae9  100%);
+                transition: 0.5s;
+                background-size: 200% auto;
+                color: white;            
+                box-shadow: 0 0 5px #eee;
+                border-color: transparent;
+                border-radius: 5px;
+            }
+        }
+        
+        @media only screen and (min-width: 769px) {
+                .main-container{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+                /* align-items: center; */
+                margin-top: 2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                flex-flow: row wrap;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
+        
+            .left{
+                display: flex;
+                /* justify-self: flex-start; */
+                flex-direction: column;
+                justify-content: space-between;
+                width: 50%;
+                height: 100%;
+                max-width: 45rem;
+                min-width: 20rem;
+                color: black;
+                padding-left: 0px;
+                margin-left: 0px;
+                
+            } 
+            .right{
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                display: flex;
+                justify-self: flex-end;
+                flex-direction: column;
+                justify-content: space-around;
+                
+                width: 45%;
+                height: 100%;
+                min-width: 20rem;
+                max-width: 45rem;
+                background-color: green;
+                color: white;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                background-color: #0998b8;
+                border-radius: .45rem;
+                /* margin-right: 1rem; */
+                /* margin-top: 2rem; */
+            }
+
+            .heading{
+            color: #0998b8;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .msg{
+            margin: 2rem;
+            max-width: 35rem;
+            margin-left: 0rem;
+            font-size: 1.10em;
+        }
+        
+        .phone{
+            margin: 1rem;
+            margin-left: 0rem;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .email{
+            margin: 1rem;
+            margin-left: 0rem;
+            display: flex;
+            flex-direction: row;
+        }
+         input{
+            width: 100%;
+         }
+
+        input, textarea{
+           display: block;
+           justify-content: center;
+            width: 100%;
+            min-width: 100%;
+            padding: .70rem 0rem;
+            padding-left: 0.5rem;
+            margin: .75rem 0rem;
+            border-radius: 5px;
+         }
+            textarea{
+                resize: none;
+            }
+            #send{
+            background-image: linear-gradient(to right, #24C6DC 0%, #218dd0  51%, #6ddae9  100%);
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 5px #eee;
+            border-color: transparent;
+            border-radius: 5px;
+          }
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left">
+            <div class="left-sub">
+                <div class="heading">Contact Us</div>
+                <div style="font-size: 2rem; font-weight: bold;">Get In Touch With Us</div>
+                <div class="msg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque earum corrupti explicabo ratione sunt blanditiis, repudiandae quae. Inventore aut expedita quidem aspernatur dolores, iure dicta illo voluptates numquam minus totam.</div>
+                <div class="phone">
+                    <div>
+                        <img src="./phone.png" alt="" width="54">
+                    </div>
+                    <div style="font-weight: bold; padding-left: 1rem;">
+                       <div style="margin-bottom: .45em; font-size: large;">Phone Number</div>
+                        <div style="font-weight: normal; color: gray; font-size: 130%;">(+91)1234567890</div>
+                    </div>
+                </div>
+                <div class="email">
+                    <div>
+                        <img src="./email_contact.png" alt="" width="54">
+                    </div>
+                    <div style="font-weight: bold; padding-left: 1rem;">
+                       <div style="margin-bottom: .45em; font-size: large;">Email ID</div>
+                        <div style="font-weight: normal; color: gray; font-size: 130%;">esaywayservices04@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mid"></div>
+        <div class="right">
+            <form action="">
+                <input type="text" name="name" id="name" placeholder="Your Name"><br>
+                <input type="email" name="email" id="email" placeholder="Your Email"><br>
+                <input type="text" name="phone" id="phone" placeholder="Your Phone"><br>
+                <textarea name="msg" id="user-msg" cols="30" rows="7" placeholder="Your Message..."></textarea>
+                <input type="submit" name="submit" id="send" value="Send">
+            </form>
+        </div>    
+    </div>
+</body>
+</html>
